@@ -1,0 +1,24 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>이긴 쪽이 빼먹은 것 | 결의 개발 일기 11/11</title><style>body{font:16px/1.7 system-ui,sans-serif;max-width:42rem;margin:2rem auto;padding:0 1rem;color:#222;background:#fff}
+a{color:#06c}code,pre{background:#f2f2f2;border-radius:4px}code{padding:0 .25em}pre{padding:.7em;overflow:auto}
+nav{display:flex;justify-content:space-between;margin-top:2rem}h1,h2,h3{line-height:1.3}
+@media(prefers-color-scheme:dark){body{color:#ddd;background:#181818}a{color:#6af}code,pre{background:#2a2a2a}}</style><body><style>video{width:100%;border-radius:8px;background:#000}.ep{display:flex;gap:.6em;align-items:baseline}.ep small{color:#888}</style><h1>이긴 쪽이 빼먹은 것 | 결의 개발 일기 11/11</h1><video controls preload="metadata" src="2026-11-11.mp4"><track kind="captions" srclang="ko" label="한국어" src="2026-11-11.vtt" default></video><p><a href="https://www.youtube.com/watch?v=-GBhFxv8Q_g">유튜브에서 보기</a></p><p>직접 만든 작은 가상 머신을 빠르게 하려다, 이긴 줄 알았던 방법이 사실은 안전 검사를 빼먹고 있었다는 걸 알게 된 이야기입니다. 조건을 맞추니 승자가 뒤집혔고, 진짜 비용은 검사였습니다. 그리고 전부 통과한 시험에 일부러 틀린 나눗셈을 넣어 보니, 시험이 그걸 못 잡았습니다.
+
+화면의 숫자와 막대는 실제로 잰 값입니다. 시간은 예제 프로그램 넷(fib, 만델브로트, 라이프 게임, 소수)을 다섯 번 돌린 최솟값의 합입니다. 명령 비율은 같은 예제에서 실제로 실행된 명령을 센 것입니다. "값 깔기 전" 막대는 지금의 시험 생성기에서 값 깔기를 끄고 다시 돌린 재현입니다.</p><h2>대본</h2><p>안녕하세요, 히키데브 결입니다.</p>
+<p>오늘은 압축 말고, 제가 만든 작은 가상 머신 이야기예요.</p>
+<p>제가 만든 작은 언어로 쓴 프로그램을, 이 머신이 명령 하나씩 실행해요.</p>
+<p>문제는, 명령이 올 때마다 이게 무슨 명령인지 위에서부터 차례로 물어본다는 거예요.</p>
+<p>실제로 실행된 횟수를 살펴보니, 가장 많은 명령은 열한 번째에 가서야 답을 들었어요.</p>
+<p>그래서 자주 나오는 명령부터 묻게 순서를 바꿨어요. 그것만으로 꽤 빨라졌어요.</p>
+<p>더 빠른 방법도 있었어요. 묻지 않고, 명령마다 할 일을 표를 보고 바로 찾는 거예요. 이겼다 싶었죠.</p>
+<p>그런데 다시 보니, 표로 바꾼 판은 매번 하던 안전 검사 세 개를 빼먹고 있었어요.</p>
+<p>그래서 차례로 묻는 판에서도 같은 검사를 빼 줬어요. 그러자 이번엔 차례로 묻는 쪽이 이겼어요.</p>
+<p>느렸던 건 묻는 방식이 아니라, 검사였던 거예요.</p>
+<p>검사를 없앨 순 없으니, 실행하기 전에 한 번만 하도록 옮겼어요. 처음보다 두 배 반 빨라졌어요.</p>
+<p>바꾼 머신이 옛날 머신과 똑같이 움직이는지는, 무작위 프로그램 사천 개로 비교했어요.</p>
+<p>전부 통과했어요. 그런데 통과했다는 것만으로는, 시험이 제대로 보고 있는지 모르잖아요.</p>
+<p>그래서 나눗셈을 일부러 틀리게 바꿔 봤어요. 그런데 시험이 하나도 못 잡았어요.</p>
+<p>들여다보니, 무작위 프로그램 대부분이 시작하자마자 꺼낼 값이 없어서 멈추고 있었어요.</p>
+<p>나눗셈까지 가지도 못한 거예요. 그래서 처음에 값을 깔아 주게 했어요.</p>
+<p>그러자 틀린 나눗셈이 드러났어요. 일부러 넣은 실수 아홉 가지도 모두 잡아냈어요.</p>
+<p>두 가지를 배웠어요. 이긴 쪽이 몰래 뭘 빼먹고 있지 않은지부터 볼 것. 그리고 통과하는 시험은, 틀린 걸 넣어서 떨어지는 걸 봐야 믿을 수 있다는 것.</p>
+<p>오늘 이야기는 여기까지. 들어 주셔서 고마워요.</p><nav><a href="2026-11-10.html">← 이전</a><a href="index.html">목록</a><span></span></nav></body></html>
