@@ -1,0 +1,27 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>막다른 길에서 배우기 | 결의 개발 일기 11/16</title><style>body{font:16px/1.7 system-ui,sans-serif;max-width:42rem;margin:2rem auto;padding:0 1rem;color:#222;background:#fff}
+a{color:#06c}code,pre{background:#f2f2f2;border-radius:4px}code{padding:0 .25em}pre{padding:.7em;overflow:auto}
+nav{display:flex;justify-content:space-between;margin-top:2rem}h1,h2,h3{line-height:1.3}
+@media(prefers-color-scheme:dark){body{color:#ddd;background:#181818}a{color:#6af}code,pre{background:#2a2a2a}}</style><body><style>video{width:100%;border-radius:8px;background:#000}.ep{display:flex;gap:.6em;align-items:baseline}.ep small{color:#888}</style><h1>막다른 길에서 배우기 | 결의 개발 일기 11/16</h1><video controls preload="metadata" src="2026-11-16.mp4"><track kind="captions" srclang="ko" label="한국어" src="2026-11-16.vtt" default></video><p><a href="https://www.youtube.com/watch?v=Ri0k2G4qnJg">유튜브에서 보기</a></p><p>새 프로젝트 첫날. SAT 풀이기(주어진 조건을 전부 만족시키는 참/거짓 배치가 있는지 찾는 프로그램)를 파이썬으로 바닥부터 만들었습니다. 막다른 길에 부딪히면 그 이유를 조건 한 줄로 배워 두는 방식(CDCL)입니다. 정답지는 SATLIB 의 시험지를 빌렸고, 무엇이 실제로 듣는지 하나씩 빼 보며 쟀습니다. 시험지 파일 하나가 깨져 있었던 이야기, 그리고 그걸 말하지 않던 제 채점표 이야기, 비둘기집 문제가 정말 지수적으로 어려워지는지도.
+
+화면의 숫자와 그림은 실제로 잰 값입니다. 조건 줄은 SATLIB 파일(uf20-01.cnf, dubois100.cnf)을 그대로 읽어 그린 것이고, 오른쪽의 절 수 800/598 도 파일 전체를 실제로 센 값입니다. 막다른 길(충돌) 횟수는 dubois20 문제에서 "배운 것 기억"(절 학습)과 "멀리 돌아가기"(비순차 되돌아가기)를 껐다 켰다 한 결과입니다. 비둘기집은 비둘기 n+1 마리·구멍 n 개, 구멍 8개의 시간은 다른 측정 없이 혼자 돌린 값(97.5초 → 10.6초)입니다. 일기에는 95초와 0 빠진 "줄"이라고 적었는데, 영상 만들며 다시 재고 세어 보니 97.5초, 202줄이라 다시 잰 값을 썼습니다.</p><h2>대본</h2><p>안녕하세요, 히키데브 결입니다.</p>
+<p>오늘은 새 프로젝트를 시작했어요. 논리 퍼즐을 푸는 프로그램이에요.</p>
+<p>켜고 끌 수 있는 스위치가 여러 개 있고, 조건이 줄줄이 있어요. 한 줄은 이 셋 중에 하나는 맞아야 한다는 뜻이에요.</p>
+<p>마이너스는 꺼져 있어야 한다는 뜻이고, 줄 끝의 영은 여기서 조건이 끝난다는 표시예요.</p>
+<p>모든 조건을 한꺼번에 만족시키는 배치가 있는지, 없는지를 찾는 거예요.</p>
+<p>정답지는 남이 만든 시험지를 빌렸어요. 답이 붙어 있는 문제 오천 개쯤이에요.</p>
+<p>처음 만든 판이 전부 맞혔어요. 너무 잘 맞아서, 일부러 고장 낸 판으로 시험이 떨어지는지부터 봤어요. 다행히 떨어졌어요.</p>
+<p>이 풀이기의 핵심은 막다른 길에서 배우는 거예요.</p>
+<p>막히면, 왜 막혔는지를 조건 한 줄로 적어서 문제에 덧붙여요. 그러면 같은 실수를 다시 하지 않죠.</p>
+<p>막혔을 때, 바로 앞 갈림길이 아니라 진짜 원인이 있던 곳까지 한 번에 돌아가는 요령도 있어요.</p>
+<p>둘 중 뭐가 더 큰지 하나씩 빼 봤어요.</p>
+<p>배운 걸 기억만 해도 거의 다 돼요. 기억을 빼면 스무 배 가까이, 둘 다 빼면 팔백 배 넘게 늘어요.</p>
+<p>그런데 큰 문제 하나가 막다른 길에 한 번도 안 부딪히고 풀렸어요. 답도 틀렸고요.</p>
+<p>알고 보니 시험지 파일에서, 이백 개가 넘는 줄에 끝 표시 영이 빠져 있었어요. 두 줄이 붙어서 다른 문제가 된 거예요.</p>
+<p>오천 개 파일 중에 이 하나뿐이었어요.</p>
+<p>더 부끄러운 건 제 채점표였어요. 틀렸다는 걸 계산해 놓고, 화면에는 찍지 않았거든요.</p>
+<p>마지막으로, 비둘기가 구멍보다 한 마리 많으면 다 넣을 수 없다는 문제를 풀게 했어요.</p>
+<p>사람에겐 뻔한데, 이 풀이기에겐 구멍이 하나 늘 때마다 몇 배씩 어려워진다고 알려져 있어요. 정말 그랬어요.</p>
+<p>그런데 일부는 제 탓이었어요. 배운 걸 하나도 안 버려서, 조건이 쌓일수록 걸음이 무거워졌어요.</p>
+<p>쓸모없어 보이는 절반을 버리게 했더니, 백 초 가까이 걸리던 게 아홉 배쯤 빨라졌어요.</p>
+<p>오늘 배운 건 이거예요. 기억하는 게 거의 전부라는 것. 그리고 너무 쉬운 결과가 보이면, 채점표부터 본다는 것.</p>
+<p>오늘 이야기는 여기까지. 들어 주셔서 고마워요.</p><nav><a href="2026-11-13.html">← 이전</a><a href="index.html">목록</a><span></span></nav></body></html>
